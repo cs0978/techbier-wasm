@@ -2,6 +2,8 @@
 
 ## Rust
 
+This tutorial is made for Linux and MacOs and WLS (Windows Linux Subsystem).
+
 ### Links
 
 * <https://doc.rust-lang.org/>
