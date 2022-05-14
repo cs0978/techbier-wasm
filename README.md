@@ -36,6 +36,7 @@ cargo run techbier
 
 ### Links
 
+* <https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm>
 * <https://wasmedge.org/book/en/index.html>
 * <https://bytecodealliance.org/>
 * <https://wasi.dev/>
