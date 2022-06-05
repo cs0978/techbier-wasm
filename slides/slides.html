@@ -102,6 +102,12 @@ file ./target/release/hello</code></pre>
 perl -ne 'code;END{morecode}'
 perl -ne 'code}{morecode'</code></pre>
 </section>
+<section id="functional" class="slide level2">
+<h2>Functional</h2>
+<pre ><code class="rust">fn factorial(n: usize) -&gt; usize {
+  (1..n+1).fold(1, |a, b| a * b)
+}</code></pre>
+</section>
 <section id="expressions" class="slide level2">
 <h2>Expressions</h2>
 <pre ><code class="rust" data-line-numbers="">let five: i32 = {
@@ -379,11 +385,48 @@ fn main() {
 </ul>
 </section>
 
+<section>
 <section id="hands-on" class="title-slide slide level1">
 <h1>Hands-On</h1>
-<!-- TODO(@jakob): think of something easy
-add something where you need to understand the borrow checker -->
+
 </section>
+<section id="install-rust" class="slide level2">
+<h2>Install Rust</h2>
+<pre ><code class="sh">curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh</code></pre>
+</section>
+<section id="create-a-new-repo" class="slide level2">
+<h2>Create a new Repo</h2>
+<pre ><code class="sh">cargo init hello
+cd hello
+cargo run</code></pre>
+</section>
+<section id="exercise" class="slide level2">
+<h2>Exercise</h2>
+<ul>
+<li>Store the string into a var of type <code>String</code>.</li>
+<li>Modify the var before printing to add your name.</li>
+<li>Refactor the modification and printing into a function.</li>
+<li>Loop and call the function 10 times.</li>
+</ul>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+<pre ><code class="rust">fn main() {
+    let mut x = "Hello, world!".to_owned();
+    for _ in 0..10 {
+        print(&mut x);
+    }
+}
+
+fn print(x: &mut String) {
+    x.push_str("Jakob");
+    println!("{}", x);
+}</code></pre>
+</section>
+<section id="mandelbrot" class="slide level2">
+<h2>Mandelbrot</h2>
+<p>https://github.com/ProgrammingRust/mandelbrot/tree/rayon</p>
+</section></section>
     </div>
   </div>
 

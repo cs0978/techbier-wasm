@@ -71,6 +71,14 @@ perl -ne 'code;END{morecode}'
 perl -ne 'code}{morecode'
 ```
 
+## Functional
+
+```rust
+fn factorial(n: usize) -> usize {
+  (1..n+1).fold(1, |a, b| a * b)
+}
+```
+
 ## Expressions
 
 ```{.rust data-line-numbers=""}
@@ -404,5 +412,44 @@ fn makes_a() -> A {
 
 # Hands-On
 
-<!-- TODO(@jakob): think of something easy
-add something where you need to understand the borrow checker -->
+## Install Rust
+
+```sh
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+## Create a new Repo
+
+```sh
+cargo init hello
+cd hello
+cargo run
+```
+
+## Exercise
+
+- Store the string into a var of type `String`.
+- Modify the var before printing to add your name.
+- Refactor the modification and printing into a function.
+- Loop and call the function 10 times.
+
+## Solution
+
+```rust
+fn main() {
+    let mut x = "Hello, world!".to_owned();
+    for _ in 0..10 {
+        print(&mut x);
+    }
+}
+
+fn print(x: &mut String) {
+    x.push_str("Jakob");
+    println!("{}", x);
+}
+```
+
+## Mandelbrot
+
+https://github.com/ProgrammingRust/mandelbrot/tree/rayon
+
