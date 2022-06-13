@@ -14,7 +14,8 @@ transition: none
 
 # Intro
 
-- why?
+- Why Rust and WASM?
+- Overview
 
 # Rust
 
@@ -38,6 +39,17 @@ transition: none
 - Metaprogramming
 - Performance
 - ...
+
+## Compared to others
+
+- Java: performance
+- Go: memory safety and concurrency guarantees
+- C++: concurrency guarantees, idiomatic code
+
+## Limitations
+
+- Learning curve...
+- Adoption
 
 ## Hello World
 
@@ -451,5 +463,7 @@ fn print(x: &mut String) {
 
 ## Mandelbrot
 
+```
 https://github.com/ProgrammingRust/mandelbrot/tree/rayon
+```
 
