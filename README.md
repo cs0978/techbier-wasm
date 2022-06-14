@@ -42,18 +42,11 @@ cargo run techbier
 * <https://wasi.dev/>
 * <https://wasmtime.dev/>
 
-### Installation
-
-```bash
-# target
-rustup target add wasm32-wasi
-```
-
 ### VSCode Plugins
 
 * WebAssembly
 
-### Browser
+### Web
 
 #### Installation
 
@@ -73,6 +66,15 @@ python3 -m http.server
 
 * Open browser with <http://localhost:8000>.
 * Reload
+
+### Wasi
+
+#### Installation
+
+```bash
+# target
+rustup target add wasm32-wasi
+```
 
 ### Wasmtime
 
